@@ -16,7 +16,6 @@ class MergeSort():
         B = self.sort(firstHalf)
         C = self.sort(secondHalf)
         self.intList = self.merge(B, C)
-        #return self.merge(B, C)
         return self.intList
 
     def merge(self, B, C):
