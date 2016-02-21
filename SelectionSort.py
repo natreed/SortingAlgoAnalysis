@@ -4,7 +4,7 @@ import time;
 class SelectionSort():
     def __init__(self, intList):
         self.intList = intList;
-    def sort(self):
+    def sort(self, intList):
         L = self.intList;
         for i in range(len(L)):
             least = i;
@@ -12,19 +12,24 @@ class SelectionSort():
                 if L[j] < L[least]:
                     least = j;
             self.swap(L, i, least);
+        return self.intList
+
     def swap(self, A, x, y):
         temp = A[x];
         A[x] = A[y];
         A[y] = temp;
 
-for i in range(10):
-    L = Util.generateList();
-    A = SelectionSort(L);
-    Start = time.time();
-    A.sort();
-    runTime = time.time() - Start;
-    #if i == 0:
-    #    print(A.intList)
-    print(runTime);
+L = Util.generateList()
+
+
+def forTime(L):
+    A = SelectionSort(L)
+    Start = time.time()
+    M = A.sort(L)
+    runTime = time.time() - Start
+    #print(M)
+    return runTime
+
+#print(forTime(L))
 
 

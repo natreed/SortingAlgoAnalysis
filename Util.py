@@ -5,7 +5,7 @@ import sys;
 
 
 def generateList():
-    randList = list(range(0, 10));
+    randList = list(range(0, 10000));
     for i in randList:
-        randList[i] = random.randrange(0, 1000);
+        randList[i] = random.randrange(0, 10000000000);
     return randList

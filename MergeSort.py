@@ -1,6 +1,7 @@
 import Util;
 import time;
 import math;
+import Sort
 
 class MergeSort():
     def __init__(self, intList):
@@ -37,12 +38,27 @@ class MergeSort():
         return A
 
 
+L = Util.generateList()
 
+
+def forTime(L):
+    A = MergeSort(L)
+    Start = time.time()
+    M = A.sort(L)
+    runTime = time.time() - Start
+    #print(M)
+    return runTime
+
+#print(forTime(L))
+
+
+"""
 for i in range(10):
-    L = Util.generateList();
+    L =  Util.generateList();
     A = MergeSort(L);
     Start = time.time();
-    A.sort(A.intList);
+    A.sort(L);
     runTime = time.time() - Start;
-    print(A.intList)
+    print(A.intList[:100])
     print(runTime);
+"""
