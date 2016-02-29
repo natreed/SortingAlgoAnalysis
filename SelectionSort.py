@@ -5,31 +5,32 @@ class SelectionSort():
     def __init__(self, intList):
         self.intList = intList;
     def sort(self, intList):
-        L = self.intList;
+        L = intList
         for i in range(len(L)):
             least = i;
             for j in range(i+1, len(L)):
                 if L[j] < L[least]:
-                    least = j;
-            self.swap(L, i, least);
+                    least = j
+            self.swap(L, i, least)
+            self.intList = L
         return self.intList
 
     def swap(self, A, x, y):
-        temp = A[x];
-        A[x] = A[y];
-        A[y] = temp;
-
-L = Util.generateList()
+        temp = A[x]
+        A[x] = A[y]
+        A[y] = temp
 
 
-def forTime(L):
-    A = SelectionSort(L)
-    Start = time.time()
-    M = A.sort(L)
-    runTime = time.time() - Start
-    #print(M)
-    return runTime
-
-#print(forTime(L))
+"""
+for i in range(10):
+    L = Util.generateList(10);
+    A = SelectionSort(L);
+    Start = time.time();
+    A.sort(L);
+    runTime = time.time() - Start;
+    if i == 0:
+        print(A.intList)
+    print(runTime);
+    """
 
 

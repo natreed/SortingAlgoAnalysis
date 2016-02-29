@@ -10,14 +10,17 @@ class PythonSorted():
         self.intList = sorted(intList)
         return self.intList
 
-L = Util.generateList()
+
+
+
+L = Util.generateList(10)
 
 def forTime(L):
     A = PythonSorted(L)
     Start = time.time()
     M = A.sort(L)
     runTime = time.time() - Start
-    #print(M)
     return runTime
 
 #print(forTime(L))
+

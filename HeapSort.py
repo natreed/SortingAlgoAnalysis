@@ -3,9 +3,10 @@ import Util
 import time
 import Sort
 
+
 class HeapSort():
     def __init__(self, intList):
-        self.intList = intList;
+        self.intList = intList
 
     def swap(self, i, j):
         sqc = self.intList
@@ -13,9 +14,9 @@ class HeapSort():
 
     def heapify(self, end,i):
         sqc = self.intList
-        l=2 * i + 1
-        r=2 * (i + 1)
-        max=i
+        l = 2 * i + 1
+        r = 2 * (i + 1)
+        max = i
         if l < end and sqc[i] < sqc[l]:
             max = l
         if r < end and sqc[max] < sqc[r]:
@@ -25,6 +26,7 @@ class HeapSort():
             self.heapify(end, max)
 
     def sort(self, intList):
+        self.intList = intList
         end = len(self.intList)
         start = end // 2 - 1 # use // instead of /
         for i in range(start, -1, -1):
@@ -34,7 +36,7 @@ class HeapSort():
             self.heapify(i, 0)
         return self.intList
 
-L = Util.generateList()
+L = Util.generateList(10)
 
 
 def forTime(L):
@@ -42,11 +44,10 @@ def forTime(L):
     Start = time.time()
     M = A.sort(L)
     runTime = time.time() - Start
-    #print(M)
+    print(M)
     return runTime
 
-#
-# print(forTime(L))
+#print(forTime(L))
 
 """
 

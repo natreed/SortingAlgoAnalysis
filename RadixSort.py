@@ -33,7 +33,7 @@ class RadixSort():
                     rd_list_append(y)
 
 
-L = Util.generateList()
+L = Util.generateList(10)
 
 def forTime(L):
     A = RadixSort(L)

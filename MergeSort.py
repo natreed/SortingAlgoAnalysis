@@ -38,7 +38,7 @@ class MergeSort():
         return A
 
 
-L = Util.generateList()
+L = Util.generateList(10)
 
 
 def forTime(L):

@@ -30,7 +30,7 @@ class QuickSort():
         self.intList = self.quickSort(L)
         return self.intList
 
-L = Util.generateList()
+L = Util.generateList(10)
 
 
 def forTime(L):
