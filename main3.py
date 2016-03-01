@@ -15,13 +15,15 @@ C = InsertionSort.InsertionSort(L)
 D = MergeSort.MergeSort(L)
 E = PythonSorted.PythonSorted(L)
 F = RadixSort.RadixSort(L)
-#G = SelectionSort.SelectionSort(L)
+G = SelectionSort.SelectionSort(L)
 
-#sortList = [A, B, C, D, E, F, G]
-#sortNames = ['Quick', 'Heap', 'Insertion', 'Merge', 'Python', 'Radix', 'Selection']
+sortList = [A, B, C, D, E, F, G]
+sortNames = ['Quick', 'Heap', 'Insertion', 'Merge', 'Python', 'Radix', 'Selection']
 
-sortList = [A, B, C, D, E, F]
-sortNames = ['Quick', 'Heap', 'Insertion', 'Merge', 'Python', 'Radix']
+
+
+#sortList = [A, B, C, D, E, F]
+#sortNames = ['Quick', 'Heap', 'Insertion', 'Merge', 'Python', 'Radix']
 
 def printTimes(timesList):
     print("quicksort")
@@ -36,15 +38,15 @@ def printTimes(timesList):
     print(timesList[4])
     print("radix sort")
     print(timesList[5])
-    #print("selection sort")
-    #print(timesList[6])
+    print("selection sort")
+    print(timesList[6])
     print('\n')
 #sortList = [C]
 #sortNames = ['Insertion']
 
 
-#sizeList = [20]
-sizeList = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000]
+sizeList = [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000]
+#sizeList = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000]
 timesList = [[], [], [], [], [], [], []]
 
 #for i in range(len(sizeList)):
@@ -91,8 +93,6 @@ for j in range(len(sortNames)):
     f.write("\n")
 printTimes(timesList)
 
-
-
 timesList = [[], [], [], [], [], [], []]
 for j in range(len(sortList)):
     for i in range(len(sizeList)):
@@ -113,7 +113,8 @@ for j in range(len(sortNames)):
         f.write(", " + str(timesList[j][k]))
     f.write("\n")
 printTimes(timesList)
-"""
+
+
 timesList = [[], [], [], [], [], [], []]
 for j in range(len(sortList)):
     for i in range(len(sizeList)):
@@ -123,7 +124,7 @@ for j in range(len(sortList)):
         runTime = (time.time() - Start) * 1000000
         runTime = float("{0:.2f}".format(runTime))
         timesList[j].append(runTime)
-f = open('LittleRange-Range_one_fifth_XSize.csv', 'w')
+f = open('LittleRange-one-thru-twenty.csv', 'w')
 f.write('Small Range. 1/5 List Size\n')
 for j in range(len(sizeList)):
     f.write(', ' + str(sizeList[j]))
@@ -134,4 +135,3 @@ for j in range(len(sortNames)):
         f.write(", " + str(timesList[j][k]))
     f.write("\n")
 printTimes(timesList)
-"""

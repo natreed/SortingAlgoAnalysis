@@ -43,8 +43,8 @@ def printTimes(timesList):
 #sortNames = ['Insertion']
 
 
-#sizeList = [20]
-sizeList = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000]
+sizeList = [20, ]
+#sizeList = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000]
 timesList = [[], [], [], [], [], [], []]
 
 #for i in range(len(sizeList)):
