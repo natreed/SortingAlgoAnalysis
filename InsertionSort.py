@@ -21,7 +21,7 @@ class InsertionSort():
         A[x] = A[y]
         A[y] = temp
 
-L = Util.generateList(100)
+L = Util.generateList(1000)
 
 def forTime(L):
     A = InsertionSort(L)
