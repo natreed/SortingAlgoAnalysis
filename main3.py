@@ -44,13 +44,15 @@ def printTimes(timesList):
 #sortList = [C]
 #sortNames = ['Insertion']
 
-sizeList = [500, 1000]
+sizeList = [8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192]
 #sizeList = [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000]
 #sizeList = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000]
 timesList = [[], [], [], [], [], [], []]
 
 #for i in range(len(sizeList)):
 
+
+"""
 for i in range(len(sizeList)):
     L = Util.generateList(sizeList[i])
     for j in range(len(sortList)):
@@ -74,15 +76,16 @@ for j in range(len(sortNames)):
 printTimes(timesList)
 
 timesList = [[], [], [], [], [], [], []]
-for j in range(len(sortList)):
+for i in range(len(sizeList)):
     L = Util.generateSorted(sizeList[i])
-    for i in range(len(sizeList)):
+    for j in range(len(sortList)):
         N = list(L)
         Start = time.time()
         M = sortList[j].sort(N)
-        runTime = (time.time() - Start) * 1000
+        runTime = (time.time() - Start) * 1000000
         runTime = float("{0:.2f}".format(runTime))
         timesList[j].append(runTime)
+        #print(M)
 f = open('SortedList-Range100XSize.csv', 'w')
 f.write('Sorted List. Range 100XSize\n')
 for j in range(len(sizeList)):
@@ -96,15 +99,16 @@ for j in range(len(sortNames)):
 printTimes(timesList)
 
 timesList = [[], [], [], [], [], [], []]
-for j in range(len(sortList)):
+for i in range(len(sizeList)):
     L = Util.generateReversed(sizeList[i])
-    for i in range(len(sizeList)):
+    for j in range(len(sortList)):
         N = list(L)
         Start = time.time()
         M = sortList[j].sort(N)
         runTime = (time.time() - Start) * 1000000
         runTime = float("{0:.2f}".format(runTime))
         timesList[j].append(runTime)
+        #print(M)
 f = open('ReversedList-Range100XSize.csv', 'w')
 f.write('Reversed List. Range 100XSize\n')
 for j in range(len(sizeList)):
@@ -116,20 +120,21 @@ for j in range(len(sortNames)):
         f.write(", " + str(timesList[j][k]))
     f.write("\n")
 printTimes(timesList)
-
+"""
 
 timesList = [[], [], [], [], [], [], []]
-for j in range(len(sortList)):
+for i in range(len(sizeList)):
     L = Util.generateSmallRange(sizeList[i])
-    for i in range(len(sizeList)):
+    for j in range(len(sortList)):
         N = list(L)
         Start = time.time()
         M = sortList[j].sort(N)
         runTime = (time.time() - Start) * 1000000
         runTime = float("{0:.2f}".format(runTime))
         timesList[j].append(runTime)
+        #print(M)
 f = open('LittleRange-one-thru-twenty.csv', 'w')
-f.write('Small Range. 1/5 List Size\n')
+f.write('Small Range (20)\n')
 for j in range(len(sizeList)):
     f.write(', ' + str(sizeList[j]))
 f.write('\n')
