@@ -49,16 +49,3 @@ def forTime(L):
     #print(M)
     return runTime
 
-#print(forTime(L))
-
-
-"""
-for i in range(10):
-    L =  Util.generateList();
-    A = MergeSort(L);
-    Start = time.time();
-    A.sort(L);
-    runTime = time.time() - Start;
-    print(A.intList[:100])
-    print(runTime);
-"""
